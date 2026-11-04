@@ -1,0 +1,24 @@
+{
+  "product_name": "示例重组人源化单克隆抗体注射液",
+  "product_code": "mAb-001",
+  "dosage_form": "注射液",
+  "batches": [
+    {"batch_id": "ENG-202201", "batch_type": "工程批",        "attributes": {"pH": 6.7, "sec_purity_pct": 97.8, "hmw_pct": 1.2, "activity_pct": 104, "hcp_ng_mg": 28}},
+    {"batch_id": "ENG-202203", "batch_type": "工程批",        "attributes": {"pH": 6.8, "sec_purity_pct": 98.0, "hmw_pct": 1.1, "activity_pct": 102, "hcp_ng_mg": 24}},
+    {"batch_id": "TOX-202206", "batch_type": "毒理批",        "attributes": {"pH": 6.7, "sec_purity_pct": 97.5, "hmw_pct": 1.3, "activity_pct": 103, "hcp_ng_mg": 26}},
+    {"batch_id": "CLN-202304", "batch_type": "临床批",        "attributes": {"pH": 6.6, "sec_purity_pct": 98.2, "hmw_pct": 1.0, "activity_pct": 105, "hcp_ng_mg": 22}},
+    {"batch_id": "CLN-202310", "batch_type": "临床批",        "attributes": {"pH": 6.8, "sec_purity_pct": 98.5, "hmw_pct": 0.9, "activity_pct": 106, "hcp_ng_mg": 19}},
+    {"batch_id": "PV-202403",  "batch_type": "工艺验证批",    "attributes": {"pH": 6.7, "sec_purity_pct": 98.8, "hmw_pct": 0.8, "activity_pct": 107, "hcp_ng_mg": 16}},
+    {"batch_id": "PV-202404",  "batch_type": "工艺验证批",    "attributes": {"pH": 6.7, "sec_purity_pct": 99.0, "hmw_pct": 0.7, "activity_pct": 108, "hcp_ng_mg": 15}},
+    {"batch_id": "PV-202405",  "batch_type": "工艺验证批",    "attributes": {"pH": 6.6, "sec_purity_pct": 98.9, "hmw_pct": 0.8, "activity_pct": 107, "hcp_ng_mg": 17}},
+    {"batch_id": "COM-202501", "batch_type": "商业化规模批",  "attributes": {"pH": 6.7, "sec_purity_pct": 98.6, "hmw_pct": 0.9, "activity_pct": 106, "hcp_ng_mg": 18}},
+    {"batch_id": "RPT-202412", "batch_type": "重复批",        "attributes": {"pH": 6.7, "sec_purity_pct": 97.9, "hmw_pct": 1.4, "activity_pct": 101, "hcp_ng_mg": 82}}
+  ],
+  "specifications": [
+    {"attribute": "pH",             "display_name": "pH",             "unit": "",       "lower_limit": 6.0,  "upper_limit": 7.2,   "is_cqa": true},
+    {"attribute": "sec_purity_pct", "display_name": "SEC-HPLC 纯度", "unit": "%",      "lower_limit": 95.0, "upper_limit": null,   "is_cqa": true},
+    {"attribute": "hmw_pct",        "display_name": "HMW 聚体",      "unit": "%",      "lower_limit": null, "upper_limit": 3.0,    "is_cqa": true},
+    {"attribute": "activity_pct",   "display_name": "生物学活性",    "unit": "%",      "lower_limit": 80.0, "upper_limit": 120.0,  "is_cqa": true},
+    {"attribute": "hcp_ng_mg",      "display_name": "HCP 残留",      "unit": "ng/mg",  "lower_limit": null, "upper_limit": 50.0,   "is_cqa": true}
+  ]
+}

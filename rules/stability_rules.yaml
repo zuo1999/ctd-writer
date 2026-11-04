@@ -1,0 +1,42 @@
+# rules/stability_rules.yaml
+# 稳定性数据处理规则 —— 修改此文件即可更新稳定性章节生成逻辑
+
+# 需要纳入 QOS 稳定性综述的批次类型
+included_batch_types:
+  - 工艺验证批
+  - 商业化规模批
+
+# 长期储存条件（2–8°C）的关键时间点
+long_term_key_time_points:
+  start: "0M"
+  end_preference:   # 按优先级取最后一个有数据的时间点
+    - "24M"
+    - "18M"
+    - "12M"
+    - "6M"
+
+# 加速条件（25°C/60%RH）的关键时间点
+accelerated_key_time_points:
+  start: "0M"
+  end_preference:
+    - "6M"
+    - "3M"
+
+# 变化幅度计算：是否报告末点相对起点的变化量
+report_change_magnitude: true
+
+# 稳定性结论生成阈值
+conclusion_thresholds:
+  # 若末点值距离限度不足此比例（相对于限度范围），触发"趋势需关注"提示
+  margin_warning_ratio: 0.1
+
+# 长期条件的储存条件关键词匹配（模糊匹配）
+long_term_condition_keywords:
+  - "2–8"
+  - "2-8"
+  - "冷藏"
+
+accelerated_condition_keywords:
+  - "25°C"
+  - "25℃"
+  - "加速"

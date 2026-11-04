@@ -1,0 +1,30 @@
+# rules/batch_filter_rules.yaml
+# 批次过滤规则 —— 修改此文件即可更新 Agent 的批次筛选逻辑，无需改代码
+
+# QOS 2.3.P.5.4 需要纳入的批次类型（按优先级排序）
+included_batch_types:
+  - 毒理批
+  - 临床批
+  - 工艺验证批
+  - 商业化规模批
+
+# 明确排除的批次类型
+excluded_batch_types:
+  - 工程批
+  - 重复批
+
+# 每种批次类型的最大纳入数量（null = 不限制）
+max_per_type:
+  毒理批: null
+  临床批: null
+  工艺验证批: null
+  商业化规模批: null
+
+# 必填字段（缺失则该批次标记为数据不完整）
+required_fields:
+  - batch_id
+  - batch_type
+
+# 超规格判定：超出 Specification 限度的批次是否仍纳入（附带标注）
+include_out_of_spec: true
+out_of_spec_note: "（注：该批次存在超规格项，详见批分析表）"
